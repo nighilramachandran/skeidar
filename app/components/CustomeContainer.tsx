@@ -14,7 +14,7 @@ const CustomeContainer: React.FC<ContainerProps> = ({
     <Container
       maxWidth={false}
       disableGutters
-      sx={{ padding: withPadding ? "0 35px" : "" }}
+      sx={{ padding: withPadding ? "35px" : "" }}
     >
       {children}
     </Container>
