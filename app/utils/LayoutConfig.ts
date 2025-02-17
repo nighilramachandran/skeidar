@@ -3,7 +3,7 @@ import { HeaderSpacing, HeaderStylesProps } from "../interfaces";
 
 const HEADER_SPACINGS: HeaderSpacing = {
   H_MOBILE: 80,
-  H_MAIN_DESKTOP: 140,
+  H_MAIN_DESKTOP: 120,
 };
 
 export const appBarStyles: SxProps = {
