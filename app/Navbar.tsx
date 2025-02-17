@@ -1,4 +1,4 @@
-import { AppBar, SxProps, Toolbar } from "@mui/material";
+import { AppBar, Box, SxProps, Toolbar } from "@mui/material";
 import React, { CSSProperties } from "react";
 
 interface HeaderStylesProps extends Omit<CSSProperties, "height"> {
@@ -34,10 +34,17 @@ const headerStyles: HeaderStylesProps = {
 
 const Navbar: React.FC = () => {
   return (
-    <AppBar sx={{ ...appBarStyles }}>
-      <Toolbar disableGutters sx={{ ...headerStyles }}></Toolbar>
-    </AppBar>
+    <React.Fragment>
+      <CampaignMessage />
+      <AppBar sx={{ ...appBarStyles }}>
+        <Toolbar disableGutters sx={{ ...headerStyles }}></Toolbar>
+      </AppBar>
+    </React.Fragment>
   );
+};
+
+const CampaignMessage = () => {
+  return <Box sx={{ height: "60px", background: "#eb2735" }}>Hello</Box>;
 };
 
 export default Navbar;
