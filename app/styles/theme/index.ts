@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 declare module "@mui/material/styles/createPalette" {
   interface TypeBackground {}
   interface TypeText {

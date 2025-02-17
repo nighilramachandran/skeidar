@@ -1,4 +1,7 @@
 "use client";
+import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
+import MenuIcon from "@mui/icons-material/Menu";
+import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import {
   AppBar,
   Badge,
@@ -7,50 +10,46 @@ import {
   Stack,
   Toolbar,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { useTheme } from "@mui/material/styles";
+import React, { useState } from "react";
+import AppDrawer from "./components/Drawer";
 import Logo from "./components/Logo";
 import {
   appBarStyles,
   CampaingStyles,
   headerStyles,
 } from "./utils/LayoutConfig";
-import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
-import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
-import AppDrawer from "./components/Drawer";
-import useResponsive from "./hooks/useResponsive";
-import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
-  const isDesktop = useResponsive("up", "md");
-  const [isMounted, setIsMounted] = useState<boolean>(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const theme = useTheme();
+
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"), {
+    defaultMatches: true,
+    noSsr: true,
+  });
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
   };
 
-  if (!isMounted) return null;
-
   return (
     <AppBar sx={{ ...appBarStyles }}>
       <CampaignMessage />
       <Toolbar disableGutters sx={{ ...headerStyles }}>
-        {!isDesktop ? (
-          <IconButton onClick={toggleDrawer}>
-            <MenuIcon sx={{ color: "text.primary", fontSize: "37px" }} />
-          </IconButton>
-        ) : (
-          <Box></Box>
-        )}
+        <IconButton
+          onClick={toggleDrawer}
+          sx={{ opacity: !isDesktop ? 1 : 0, transition: "opacity 0.3s" }}
+        >
+          <MenuIcon sx={{ color: "text.primary", fontSize: "37px" }} />
+        </IconButton>
+
         <AppDrawer open={openDrawer} onClose={toggleDrawer} />
         <Logo />
-
-        {isDesktop ? <ProfileAndCart /> : <Box></Box>}
+        <ProfileAndCart isDesktop={isDesktop} />
       </Toolbar>
     </AppBar>
   );
@@ -64,9 +63,20 @@ const CampaignMessage = () => {
   );
 };
 
-const ProfileAndCart = () => {
+interface ProfileAndCartProps {
+  isDesktop: boolean;
+}
+
+const ProfileAndCart: React.FC<ProfileAndCartProps> = ({ isDesktop }) => {
   return (
-    <Stack sx={{ flexDirection: "row", gap: "15px" }}>
+    <Stack
+      sx={{
+        flexDirection: "row",
+        gap: "15px",
+        opacity: isDesktop ? 1 : 0,
+        transition: "opacity 0.3s",
+      }}
+    >
       <PermIdentityOutlinedIcon sx={{ fontSize: "37px" }} />
       <Badge badgeContent={4} color="primary">
         <LocalMallOutlinedIcon sx={{ fontSize: "37px" }} />
