@@ -1,17 +1,16 @@
-import { Components } from "@mui/material/styles";
+import { Components, Theme } from "@mui/material/styles";
 
-export const linkOverride: Components = {
+export const linkOverride: Components<Theme> = {
   MuiLink: {
     styleOverrides: {
-      root: {
+      root: ({ theme }) => ({
         textDecoration: "none",
-        fontSize: "16px",
-        fontWeight: "bold",
-
+        fontSize: "15px",
+        color: theme.palette.text.link,
         "&:hover": {
           opacity: 0.48,
         },
-      },
+      }),
     },
     variants: [],
   },

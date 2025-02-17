@@ -4,6 +4,7 @@ declare module "@mui/material/styles/createPalette" {
   interface TypeText {
     dark: string;
     danger: string;
+    link: string;
   }
   interface TypeBackground {
     header: string;
