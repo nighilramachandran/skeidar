@@ -1,8 +1,8 @@
-import React from "react";
-import CustomLink from "./CustomLink";
-import { UrlObject } from "url";
 import { SxProps } from "@mui/material";
 import { Box } from "@mui/system";
+import React from "react";
+import { UrlObject } from "url";
+import CustomLink from "./CustomLink";
 
 interface CategoryListProps {
   direction?: "horizontal" | "vertical";
@@ -57,12 +57,21 @@ const CatergoryList: React.FC<CategoryListProps> = ({
 }) => {
   console.log("direction", direction);
   return (
-    <Box sx={{ ...categoryListStyles }}>
-      {categoryList.map((cat) => {
+    <Box
+      sx={{
+        ...categoryListStyles,
+        flexDirection: direction === "horizontal" ? "row" : "column",
+      }}
+    >
+      {categoryList.map((cat, index) => {
         return (
-          <CustomLink key={cat.name} href={cat.href}>
-            {cat.translationKey}
-          </CustomLink>
+          <React.Fragment key={cat.name}>
+            <CustomLink href={cat.href}>{cat.translationKey}</CustomLink>
+            {direction === "horizontal" &&
+              categoryList.length - 1 !== index && (
+                <span style={{ color: "#b3b3b3" }}>|</span>
+              )}
+          </React.Fragment>
         );
       })}
     </Box>
