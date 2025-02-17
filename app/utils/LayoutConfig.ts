@@ -22,3 +22,8 @@ export const headerStyles: HeaderStylesProps = {
   justifyContent: "space-between",
   position: "relative",
 };
+
+export const CampaingStyles: SxProps = {
+  height: "60px",
+  bgcolor: "background.danger",
+};
