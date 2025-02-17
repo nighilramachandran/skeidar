@@ -5,3 +5,9 @@
     url("./Fonts/MarkPro.woff") format("woff");
   font-weight: normal;
 }
+@font-face {
+  font-family: "Vinter-Medium'";
+  font-display: swap;
+  src: url("./Fonts/VinterWeb-Medium.woff2") format("woff2");
+  font-weight: normal;
+}
