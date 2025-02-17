@@ -19,8 +19,8 @@ export const headerStyles: HeaderStylesProps = {
     md: HEADER_SPACINGS.H_MAIN_DESKTOP,
   },
   padding: 2,
-  justifyContent: "space-between",
   position: "relative",
+  justifyContent: "space-between",
 };
 
 export const CampaingStyles: SxProps = {
