@@ -31,8 +31,6 @@ const LanguageProviders: React.FC<ThemeProviderProps> = ({ children }) => {
     i18n.changeLanguage(newLang);
   };
 
-  console.log("lang", lang);
-
   return (
     <LanguageContext.Provider value={[lang, setLanguage]}>
       {children}
