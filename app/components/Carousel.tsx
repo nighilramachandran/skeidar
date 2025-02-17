@@ -1,24 +1,26 @@
 "use client";
 
 import { Box } from "@mui/material";
+import { ReactNode } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const slides = [
-  { title: "Slide 1", image: "/images/slide1.jpg" },
-  { title: "Slide 2", image: "/images/slide2.jpg" },
-  { title: "Slide 3", image: "/images/slide3.jpg" },
-  { title: "Slide 4", image: "/images/slide4.jpg" },
-  { title: "Slide 5", image: "/images/slide5.jpg" },
-];
+export interface CarouselProps {
+  items: ItemPrpos[];
+}
 
-const Carousel = () => {
+export interface ItemPrpos {
+  name: string;
+  item: ReactNode;
+}
+
+const Carousel: React.FC<CarouselProps> = ({ items }) => {
   return (
     <Swiper
-      modules={[Navigation, Autoplay]}
+      modules={[Navigation]}
       spaceBetween={20}
       slidesPerView={1}
       navigation
@@ -28,16 +30,25 @@ const Carousel = () => {
         768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 },
       }}
-      className="w-full max-w-5xl mx-auto"
+      style={{ padding: "35px 0px" }}
     >
-      {slides.map((slide, index) => (
+      {items.map((item, index) => (
         <SwiperSlide
           key={index}
           style={{ display: "flex", justifyContent: "center" }}
         >
           <Box
-            sx={{ height: "300px", width: "360px", background: "red" }}
-          ></Box>
+            sx={{
+              height: "375px",
+              width: "375px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              background: "red",
+            }}
+          >
+            {item.item}
+          </Box>
         </SwiperSlide>
       ))}
     </Swiper>

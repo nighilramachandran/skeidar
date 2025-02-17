@@ -9,3 +9,6 @@ export const imageUrl3 =
 
 export const imageUrl4 =
   "https://www.skeidar.no/globalassets/inspirasjon/jensen-nyheter-til-soverommet/charon-nattbord-closeup.jpg?maxwidth=1440&quality=80&format=jpg";
+
+export const lambUrl =
+  "https://www.skeidar.no/globalassets/9999/alle-produkter/all-belysning/bordlamper/112314_hvit_000_001.jpg?id=eqAhI4&width=393&height=294&rmode=min&quality=75&format=jpg";
