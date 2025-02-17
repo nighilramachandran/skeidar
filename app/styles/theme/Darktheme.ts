@@ -12,7 +12,7 @@ const darkThemeOptions: ThemeOptions = {
     background: {
       default: "#ffffff",
       header: "#f8f7f4",
-      paper: "#27405a",
+      danger: "#eb2735",
     },
     primary: {
       main: "#23273b",

@@ -8,6 +8,7 @@ declare module "@mui/material/styles/createPalette" {
     header: string;
     secondary: string;
     paper: string;
+    danger: string;
   }
 }
 
