@@ -1,6 +1,7 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import type { Metadata } from "next";
 import theme from "./styles/theme/theme";
+import Navbar from "./Navbar";
 
 export const metadata: Metadata = {
   title: "Skeidar | Home Appliances",
@@ -17,7 +18,10 @@ export default function RootLayout({
     <html lang="en">
       <ThemeProvider theme={theme}>
         <CssBaseline enableColorScheme />
-        <body>{children}</body>
+        <body>
+          <Navbar />
+          <main>{children}</main>
+        </body>
       </ThemeProvider>
     </html>
   );

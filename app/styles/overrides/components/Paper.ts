@@ -10,8 +10,6 @@ export const paperOverride: Components<Theme> = {
         [theme.breakpoints.down("md")]: {
           padding: theme.spacing(1),
         },
-
-        borderRadius: theme.shape.borderRadius * 4,
       }),
     },
   },
