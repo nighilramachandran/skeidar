@@ -6,8 +6,8 @@ const darkThemeOptions: ThemeOptions = {
   palette: {
     mode: "dark",
     text: {
-      primary: "#FFFFFF",
-      secondary: "#DDDDDD",
+      primary: "#000000",
+      secondary: "#ffffff",
     },
     background: {
       default: "#ffffff",

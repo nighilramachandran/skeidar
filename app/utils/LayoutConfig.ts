@@ -31,4 +31,5 @@ export const CampaingStyles: SxProps = {
   justifyContent: "center",
   alignItems: "center",
   textAlign: "center",
+  color: "text.secondary",
 };
