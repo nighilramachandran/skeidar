@@ -8,13 +8,14 @@ import {
 } from "./utils/LayoutConfig";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
+import AppDrawer from "./components/Drawer";
 
 const Navbar: React.FC = () => {
   return (
     <AppBar sx={{ ...appBarStyles }}>
       <CampaignMessage />
       <Toolbar disableGutters sx={{ ...headerStyles }}>
-        <Box></Box>
+        <AppDrawer />
         <Logo />
         <ProfileAndCart />
       </Toolbar>
