@@ -1,4 +1,4 @@
-import { AppBar, Box, SxProps, Toolbar } from "@mui/material";
+import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import {
   appBarStyles,
@@ -16,7 +16,11 @@ const Navbar: React.FC = () => {
 };
 
 const CampaignMessage = () => {
-  return <Box sx={{ ...CampaingStyles }}>Hello</Box>;
+  return (
+    <Box sx={{ ...CampaingStyles }}>
+      <Typography>CAMPAIGN MESSAGE LINE WITH MOVEMENT</Typography>
+    </Box>
+  );
 };
 
 export default Navbar;

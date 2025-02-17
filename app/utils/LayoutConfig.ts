@@ -26,4 +26,9 @@ export const headerStyles: HeaderStylesProps = {
 export const CampaingStyles: SxProps = {
   height: "60px",
   bgcolor: "background.danger",
+  letterSpacing: "5px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  textAlign: "center",
 };
