@@ -21,6 +21,7 @@ import {
   CampaingStyles,
   headerStyles,
 } from "./utils/LayoutConfig";
+import { useTranslation } from "react-i18next";
 
 const Navbar: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -31,6 +32,8 @@ const Navbar: React.FC = () => {
     defaultMatches: true,
     noSsr: true,
   });
+
+  const { t, i18n } = useTranslation();
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -56,9 +59,11 @@ const Navbar: React.FC = () => {
 };
 
 const CampaignMessage = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <Box sx={{ ...CampaingStyles }}>
-      <Typography>CAMPAIGN MESSAGE LINE WITH MOVEMENT</Typography>
+      <Typography>{t("CAMPAIGN_MESSAGE")}</Typography>
     </Box>
   );
 };

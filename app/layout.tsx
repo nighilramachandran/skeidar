@@ -2,6 +2,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import type { Metadata } from "next";
 import Navbar from "./Navbar";
 import theme from "./styles/theme/theme";
+import LanguageProviders from "./providers/LanguageProviders";
 
 export const metadata: Metadata = {
   title: "Skeidar | Home Appliances",
@@ -15,13 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={"no"}>
+    <html lang={"en"}>
       <body>
-        <ThemeProvider theme={theme}>
-          <CssBaseline enableColorScheme />
-          <Navbar />
-          <main>{children}</main>
-        </ThemeProvider>
+        <LanguageProviders>
+          <ThemeProvider theme={theme}>
+            <CssBaseline enableColorScheme />
+            <Navbar />
+            <main>{children}</main>
+          </ThemeProvider>
+        </LanguageProviders>
       </body>
     </html>
   );
