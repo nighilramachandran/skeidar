@@ -10,10 +10,9 @@ const darkThemeOptions: ThemeOptions = {
       secondary: "#DDDDDD",
     },
     background: {
-      default: "#181A21",
-      header: "#272a3e",
+      default: "#ffffff",
+      header: "#f8f7f4",
       paper: "#27405a",
-      secondary: "#DDDDDD",
     },
     primary: {
       main: "#23273b",
