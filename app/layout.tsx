@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={"en"}>
+    <html lang={"no"}>
       <body>
         <ThemeProvider theme={theme}>
           <CssBaseline enableColorScheme />
