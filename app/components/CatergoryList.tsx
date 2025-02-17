@@ -42,13 +42,12 @@ const CatergoryList: React.FC<CategoryListProps> = ({
 }) => {
   const pathname = usePathname();
 
-  console.log("pathname", pathname);
-
   return (
     <Box
       sx={{
         ...categoryListStyles,
         flexDirection: direction === "horizontal" ? "row" : "column",
+        bgcolor: "background.default",
       }}
     >
       {categoryList.map((cat, index) => {

@@ -21,6 +21,7 @@ import {
   CampaingStyles,
   headerStyles,
 } from "./utils/LayoutConfig";
+import CatergoryList from "./components/CatergoryList";
 
 const Navbar: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -51,6 +52,7 @@ const Navbar: React.FC = () => {
         <Logo />
         <ProfileAndCart isDesktop={isDesktop} />
       </Toolbar>
+      <CatergoryList />
     </AppBar>
   );
 };
