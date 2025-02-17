@@ -1,6 +1,6 @@
 import React from "react";
 import CustomeContainer from "./CustomeContainer";
-import { Box, Stack, SxProps } from "@mui/material";
+import { Box, Stack, SxProps, Typography } from "@mui/material";
 import Image from "next/image";
 import {
   imageUrl1,
@@ -27,7 +27,6 @@ const sellerItemsContainerStyles: SxProps = {
   flexWrap: "wrap",
   width: "100%",
   gap: "40px",
-  justifyContent: "center",
 };
 
 const BestSeller: React.FC = () => {
@@ -36,10 +35,18 @@ const BestSeller: React.FC = () => {
       <Stack
         sx={{
           ...sellerItemsContainerStyles,
+          justifyContent: { xs: "center", xl: "space-around" },
         }}
       >
         {bestSellerAssets.map((bstSeller, index) => {
-          return <SellerComponent key={index} assets={bstSeller.imgUrl} />;
+          return (
+            <SellerComponent
+              key={index}
+              imgUrl={bstSeller.imgUrl}
+              name={bstSeller.name}
+              desc={bstSeller.desc}
+            />
+          );
         })}
       </Stack>
     </CustomeContainer>
@@ -52,21 +59,35 @@ const sellerComponent: SxProps = {
   height: "300px",
 };
 
-interface SellerComponentValues {
-  assets: string;
-}
-
-const SellerComponent: React.FC<SellerComponentValues> = ({ assets }) => {
+const SellerComponent: React.FC<bestSellerAssetsValues> = ({
+  imgUrl,
+  name,
+  desc,
+}) => {
   return (
-    <Box sx={{ ...sellerComponent }}>
-      <Image
-        src={assets}
-        alt="Example Image"
-        priority
-        fill
-        style={{ objectFit: "cover" }}
-      />
-    </Box>
+    <Stack sx={{ textAlign: "center" }} spacing={2}>
+      <Box sx={{ ...sellerComponent }}>
+        <Image
+          src={imgUrl}
+          alt="Example Image"
+          priority
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </Box>
+      <Typography sx={{ fontFamily: "Vinter-Medium", fontSize: "38px" }}>
+        {name}
+      </Typography>
+      <Typography
+        sx={{
+          textDecoration: "underline",
+          letterSpacing: "3px",
+          cursor: "pointer",
+        }}
+      >
+        {desc}
+      </Typography>
+    </Stack>
   );
 };
 

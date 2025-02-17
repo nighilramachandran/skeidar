@@ -7,6 +7,7 @@ export default function Home() {
     <React.Fragment>
       <Hero />
       <BestSeller />
+      <Hero />
     </React.Fragment>
   );
 }
