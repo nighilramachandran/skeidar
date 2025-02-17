@@ -1,6 +1,13 @@
 import React from "react";
 
-const CatergoryList: React.FC = () => {
+interface CategoryListProps {
+  direction?: "horizontal" | "vertical";
+}
+
+const CatergoryList: React.FC<CategoryListProps> = ({
+  direction = "horizontal",
+}) => {
+  console.log("direction", direction);
   return <div style={{ height: "20px", width: "100%" }}>CatergoryList</div>;
 };
 

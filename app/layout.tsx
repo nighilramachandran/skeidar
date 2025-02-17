@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={"en"}>
+    <html lang={"no"}>
       <body>
         <LanguageProviders>
           <ThemeProvider theme={theme}>
