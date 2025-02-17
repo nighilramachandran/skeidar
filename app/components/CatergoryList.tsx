@@ -55,7 +55,6 @@ const categoryListStyles: SxProps = {
 const CatergoryList: React.FC<CategoryListProps> = ({
   direction = "horizontal",
 }) => {
-  console.log("direction", direction);
   return (
     <Box
       sx={{
