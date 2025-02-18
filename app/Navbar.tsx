@@ -21,6 +21,7 @@ import {
   CampaingStyles,
   headerStyles,
 } from "./utils/LayoutConfig";
+import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -52,8 +53,14 @@ const Navbar: React.FC = () => {
 };
 
 const CampaignMessage = () => {
+  const pathname = usePathname();
   return (
-    <Box sx={{ ...CampaingStyles, bgcolor: "background.danger" }}>
+    <Box
+      sx={{
+        ...CampaingStyles,
+        bgcolor: pathname === "/" ? "background.danger" : "background.warning",
+      }}
+    >
       <Typography>CAMPAIGN MESSAGE LINE WITH MOVEMENT</Typography>
     </Box>
   );
