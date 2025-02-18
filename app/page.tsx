@@ -12,6 +12,7 @@ export default function Home() {
       <Carousel items={carouselItems1} />
       <Hero />
       <Carousel items={carouselItems2} title="Carousel with SKU-products" />
+      <BestSeller />
     </React.Fragment>
   );
 }
