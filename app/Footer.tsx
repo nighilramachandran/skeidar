@@ -81,10 +81,12 @@ const SectionTwo: React.FC = () => {
         src="/images/footer_image.png"
         fill
         style={{ objectFit: "contain" }}
+        sizes="(max-width: 600px) 100vw, 33vw"
       />
     </Box>
   );
 };
+
 const SectionThree: React.FC = () => {
   return (
     <Box

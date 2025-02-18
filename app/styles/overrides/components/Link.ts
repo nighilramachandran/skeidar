@@ -8,7 +8,8 @@ export const linkOverride: Components<Theme> = {
         fontSize: "15px",
         color: theme.palette.text.link,
         "&:hover": {
-          opacity: 0.48,
+          opacity: 0.7,
+          color: theme.palette.text.primary,
         },
       }),
     },
