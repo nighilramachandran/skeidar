@@ -18,12 +18,12 @@ interface CategoryListValues {
 
 const categoryList: CategoryListValues[] = [
   { name: "home", translationKey: "Hjem", href: "/" },
-  { name: "all products", translationKey: "Alle produkter", href: "/products" },
-  { name: "all beds", translationKey: "Alle senger", href: "/beds" },
+  { name: "all products", translationKey: "Alle produkter", href: "products" },
+  { name: "all beds", translationKey: "Alle senger", href: "beds" },
   {
     name: "continental beds",
     translationKey: "Kontinentalsenger",
-    href: "/continental-beds",
+    href: "continental-beds",
   },
 ];
 
@@ -53,8 +53,10 @@ const CatergoryList: React.FC<CategoryListProps> = ({
         return (
           <React.Fragment key={cat.name}>
             <CustomLink
-              href={cat.href}
-              sx={{ color: pathname === cat.href ? "text.primary" : "" }}
+              href={`/${cat.href}`}
+              sx={{
+                color: pathname === `/${cat.href}` ? "text.primary" : "",
+              }}
             >
               {cat.translationKey}
             </CustomLink>
