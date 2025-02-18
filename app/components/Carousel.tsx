@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Stack, SxProps, Typography } from "@mui/material";
+import { Box, SxProps, Typography } from "@mui/material";
 import { ReactNode, useEffect } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -49,7 +49,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, title }) => {
         </Typography>
       )}
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
         navigation
