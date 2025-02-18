@@ -23,7 +23,7 @@ const carouselImageWrapperStyles2: SxProps = {
 };
 
 export const carouselItems1: ItemPrpos[] = Array.from(
-  { length: 6 },
+  { length: 10 },
   (_, index) => ({
     name: `Item ${index + 1}`,
     item: (
@@ -59,7 +59,7 @@ export const carouselItems1: ItemPrpos[] = Array.from(
 );
 
 export const carouselItems2: ItemPrpos[] = Array.from(
-  { length: 6 },
+  { length: 10 },
   (_, index) => ({
     name: `Item ${index + 1}`,
     item: (

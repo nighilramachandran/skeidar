@@ -53,7 +53,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, title }) => {
         spaceBetween={20}
         slidesPerView={1}
         navigation
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 1400 }}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
