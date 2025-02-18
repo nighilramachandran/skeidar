@@ -1,3 +1,4 @@
+import { badgeOverride } from "./Badge";
 import { buttonOverride } from "./Button";
 import { inputOverride } from "./Input";
 import { linkOverride } from "./Link";
@@ -10,4 +11,5 @@ export const componetnsOverrides = {
   ...linkOverride,
   ...paperOverride,
   ...tapOverride,
+  ...badgeOverride,
 };

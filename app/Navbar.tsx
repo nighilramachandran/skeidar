@@ -80,7 +80,7 @@ const ProfileAndCart: React.FC<ProfileAndCartProps> = ({ isDesktop }) => {
       }}
     >
       <PermIdentityOutlinedIcon sx={{ fontSize: "37px" }} />
-      <Badge badgeContent={4} color="primary">
+      <Badge badgeContent={4} color="info">
         <LocalMallOutlinedIcon sx={{ fontSize: "37px" }} />
       </Badge>
     </Stack>
