@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, SxProps } from "@mui/material";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -26,6 +26,12 @@ const swiperSlideItemWrapper: SxProps = {
 };
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--swiper-theme-color",
+      "#808080"
+    );
+  }, []);
   return (
     <Swiper
       modules={[Navigation, Autoplay]}
