@@ -1,4 +1,8 @@
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import {
+  CssBaseline,
+  StyledEngineProvider,
+  ThemeProvider,
+} from "@mui/material";
 import type { Metadata } from "next";
 import Navbar from "./Navbar";
 import theme from "./styles/theme/theme";
@@ -18,13 +22,15 @@ export default function RootLayout({
   return (
     <html lang={"no"}>
       <body>
-        <LanguageProviders>
-          <ThemeProvider theme={theme}>
-            <CssBaseline enableColorScheme />
-            <Navbar />
-            <main>{children}</main>
-          </ThemeProvider>
-        </LanguageProviders>
+        <StyledEngineProvider injectFirst>
+          <LanguageProviders>
+            <ThemeProvider theme={theme}>
+              <CssBaseline enableColorScheme />
+              <Navbar />
+              <main>{children}</main>
+            </ThemeProvider>
+          </LanguageProviders>
+        </StyledEngineProvider>
       </body>
     </html>
   );

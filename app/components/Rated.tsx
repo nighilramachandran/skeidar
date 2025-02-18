@@ -69,7 +69,7 @@ const Rated: React.FC = () => {
             <Typography
               sx={{ fontSize: "18px", fontWeight: 300, letterSpacing: "1px" }}
             >
-              "Rask og profesjonell service!"
+              &quot;Rask og profesjonell service!&quot;
             </Typography>
           </Stack>
         </Grid2>

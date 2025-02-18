@@ -10,28 +10,23 @@ import {
   Stack,
   Toolbar,
   Typography,
-  useMediaQuery,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import React, { useState } from "react";
+import CatergoryList from "./components/CatergoryList";
 import AppDrawer from "./components/Drawer";
 import Logo from "./components/Logo";
+import useResponsive from "./hooks/useResponsive";
 import {
   appBarStyles,
   CampaingStyles,
   headerStyles,
 } from "./utils/LayoutConfig";
-import CatergoryList from "./components/CatergoryList";
 
 const Navbar: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
 
-  const theme = useTheme();
-
-  const isDesktop = useMediaQuery(theme.breakpoints.up("md"), {
-    defaultMatches: true,
-    noSsr: true,
-  });
+  const isDesktop = useResponsive("up", "md");
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -50,7 +45,7 @@ const Navbar: React.FC = () => {
 
         <AppDrawer open={openDrawer} onClose={toggleDrawer} />
         <Logo />
-        <ProfileAndCart isDesktop={isDesktop} />
+        <ProfileAndCart isDesktop={isDesktop!!} />
       </Toolbar>
       <CatergoryList />
     </AppBar>

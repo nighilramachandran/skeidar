@@ -16,7 +16,6 @@ export default function Home() {
       <Carousel items={carouselItems2} title="Carousel with SKU-products" />
       <BestSellerSlider />
       <Rated />
-      <BestSellerSlider />
     </React.Fragment>
   );
 }
