@@ -18,3 +18,13 @@ export const bestSellerAssets: bestSellerAssetsValues[] = [
   { name: "Hedda modulsofa", imgUrl: imageUrl3, desc: "SE MER HER" },
   { name: "Enjoy modulsofa", imgUrl: imageUrl2, desc: "SE MER HER" },
 ];
+export const bestSellerSliderAssets: bestSellerAssetsValues[] = [
+  { name: "Opptil 60%", imgUrl: imageUrl1, desc: "SE MODULSOFAER" },
+  { name: "Enjoy modulsofa", imgUrl: imageUrl4, desc: "SE MER HER" },
+  { name: "Hedda modulsofa", imgUrl: imageUrl3, desc: "SE MER HER" },
+  { name: "Enjoy modulsofa", imgUrl: imageUrl2, desc: "SE MER HER" },
+  { name: "Opptil 60%", imgUrl: imageUrl1, desc: "SE MODULSOFAER" },
+  { name: "Enjoy modulsofa", imgUrl: imageUrl4, desc: "SE MER HER" },
+  { name: "Hedda modulsofa", imgUrl: imageUrl3, desc: "SE MER HER" },
+  { name: "Enjoy modulsofa", imgUrl: imageUrl2, desc: "SE MER HER" },
+];
