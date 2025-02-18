@@ -73,6 +73,7 @@ const SellerComponent: React.FC<bestSellerAssetsValues> = ({
           priority
           fill
           style={{ objectFit: "cover" }}
+          sizes="(max-width: 600px) 100vw, 33vw"
         />
       </Box>
       <Typography sx={{ fontFamily: "Vinter-Medium", fontSize: "38px" }}>
