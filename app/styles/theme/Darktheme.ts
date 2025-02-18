@@ -14,6 +14,7 @@ const darkThemeOptions: ThemeOptions = {
       default: "#ffffff",
       header: "#f8f7f4",
       danger: "#eb2735",
+      footer: "#f2ede7",
     },
     primary: {
       main: "#23273b",

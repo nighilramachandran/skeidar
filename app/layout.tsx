@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import Navbar from "./Navbar";
 import theme from "./styles/theme/theme";
 import LanguageProviders from "./providers/LanguageProviders";
+import Footer from "./Footer";
 
 export const metadata: Metadata = {
   title: "Skeidar | Home Appliances",
@@ -28,6 +29,9 @@ export default function RootLayout({
               <CssBaseline enableColorScheme />
               <Navbar />
               <main>{children}</main>
+              <footer>
+                <Footer />
+              </footer>
             </ThemeProvider>
           </LanguageProviders>
         </StyledEngineProvider>

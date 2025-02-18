@@ -11,6 +11,7 @@ declare module "@mui/material/styles/createPalette" {
     secondary: string;
     paper: string;
     danger: string;
+    footer: string;
   }
 }
 
