@@ -7,7 +7,7 @@ import { ItemsCard } from "./ItemsCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-const BestSellerSlider = () => {
+const BestSellerSwipper = () => {
   return (
     <Box sx={{ overflow: "hidden", width: "100%" }}>
       <Swiper
@@ -31,4 +31,4 @@ const BestSellerSlider = () => {
   );
 };
 
-export default BestSellerSlider;
+export default BestSellerSwipper;
