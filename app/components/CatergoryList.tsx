@@ -30,10 +30,9 @@ const categoryList: CategoryListValues[] = [
 const categoryListStyles: SxProps = {
   height: "60px",
   width: "100%",
-  padding: "10px",
+  padding: "20px",
   display: "flex",
   alignItems: "center",
-  marginLeft: "20px",
   gap: "10px",
 };
 
