@@ -1,3 +1,5 @@
+import { ROUTES } from "../utils/RouteConfig";
+
 export interface Product {
   id: number;
   name: string;
@@ -7,8 +9,10 @@ export interface Product {
 
 export type ProductCategory = Record<string, Product[]>;
 
+const { ALL_PRODUCTS, ALL_BEDS, CONTINENTAL_BEDS } = ROUTES;
+
 export const productsData: ProductCategory = {
-  "all-products": [
+  [ALL_PRODUCTS]: [
     {
       id: 1,
       name: "Sofa",
@@ -22,7 +26,7 @@ export const productsData: ProductCategory = {
       price: "$100",
     },
   ],
-  "all-beds": [
+  [ALL_BEDS]: [
     {
       id: 1,
       name: "King Size Bed",
@@ -150,7 +154,7 @@ export const productsData: ProductCategory = {
       price: "$900",
     },
   ],
-  "continental-beds": [
+  [CONTINENTAL_BEDS]: [
     {
       id: 1,
       name: "Luxury Continental Bed",

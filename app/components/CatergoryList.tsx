@@ -5,6 +5,7 @@ import React from "react";
 import { UrlObject } from "url";
 import CustomLink from "./CustomLink";
 import { usePathname } from "next/navigation";
+import { ROUTES } from "../utils/RouteConfig";
 
 interface CategoryListProps {
   direction?: "horizontal" | "vertical";
@@ -16,14 +17,20 @@ interface CategoryListValues {
   href: string | UrlObject;
 }
 
+const { ROOT, ALL_PRODUCTS, ALL_BEDS, CONTINENTAL_BEDS } = ROUTES;
+
 const categoryList: CategoryListValues[] = [
-  { name: "home", translationKey: "Hjem", href: "/" },
-  { name: "all products", translationKey: "Alle produkter", href: "products" },
-  { name: "all beds", translationKey: "Alle senger", href: "beds" },
+  { name: "home", translationKey: "Hjem", href: ROOT },
+  {
+    name: "all products",
+    translationKey: "Alle produkter",
+    href: ALL_PRODUCTS,
+  },
+  { name: "all beds", translationKey: "Alle senger", href: ALL_BEDS },
   {
     name: "continental beds",
     translationKey: "Kontinentalsenger",
-    href: "continental-beds",
+    href: CONTINENTAL_BEDS,
   },
 ];
 
