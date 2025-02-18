@@ -55,7 +55,12 @@ const CatergoryList: React.FC<CategoryListProps> = ({
             <CustomLink
               href={`/${cat.href}`}
               sx={{
-                color: pathname === `/${cat.href}` ? "text.primary" : "",
+                color:
+                  pathname === cat.href
+                    ? "text.primary"
+                    : pathname === `/${cat.href}`
+                    ? "text.primary"
+                    : "",
               }}
             >
               {cat.translationKey}
