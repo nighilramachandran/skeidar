@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
 
 const CampaignMessage = () => {
   return (
-    <Box sx={{ ...CampaingStyles }}>
+    <Box sx={{ ...CampaingStyles, bgcolor: "background.danger" }}>
       <Typography>CAMPAIGN MESSAGE LINE WITH MOVEMENT</Typography>
     </Box>
   );
