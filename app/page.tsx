@@ -1,10 +1,9 @@
+import { Box } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 import BestSeller from "./components/BestSeller";
 import Carousel, { ItemPrpos } from "./components/Carousel";
 import Hero from "./components/Hero";
-import { Box } from "@mui/material";
-import Image from "next/image";
-import { lambUrl } from "./utils/GlobalAssets";
 
 const items: ItemPrpos[] = [
   {
@@ -18,14 +17,12 @@ const items: ItemPrpos[] = [
           overflow: "hidden",
         }}
       >
-        {/* <Image
-          src={lambUrl}
+        <Image
           alt="lamb"
-          priority
-          fill
-          style={{ objectFit: "cover" }}
-        ></Image> */}
-        <Image alt="lamb" src={lambUrl} width={70} height={70}></Image>
+          src={"/images/nightlamb.png"}
+          width={70}
+          height={70}
+        ></Image>
       </Box>
     ),
   },
