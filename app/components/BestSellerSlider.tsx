@@ -1,34 +1,32 @@
-import { Box, SxProps } from "@mui/material";
+"use client";
+
+import { Box } from "@mui/material";
 import React from "react";
 import { bestSellerSliderAssets } from "../utils/GlobalAssets";
 import { ItemsCard } from "./ItemsCard";
-
-const bestSellerSliderStyles: SxProps = {
-  display: "flex",
-  flexDirection: "row",
-  gap: 5,
-  overflow: "hidden",
-  overflowX: "scroll",
-  "&::-webkit-scrollbar": {
-    display: "none",
-  },
-  msOverflowStyle: "none",
-  scrollbarWidth: "none",
-};
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const BestSellerSlider = () => {
   return (
-    <Box sx={bestSellerSliderStyles}>
-      {bestSellerSliderAssets.map((bstSeller, index) => {
-        return (
-          <ItemsCard
-            key={index}
-            imgUrl={bstSeller.imgUrl}
-            name={bstSeller.name}
-            desc={bstSeller.desc}
-          />
-        );
-      })}
+    <Box sx={{ overflow: "hidden", width: "100%" }}>
+      <Swiper
+        slidesPerView={"auto"}
+        spaceBetween={20}
+        freeMode={true}
+        grabCursor={true}
+        style={{ padding: "10px" }}
+      >
+        {bestSellerSliderAssets.map((bstSeller, index) => (
+          <SwiperSlide key={index} style={{ width: "auto" }}>
+            <ItemsCard
+              imgUrl={bstSeller.imgUrl}
+              name={bstSeller.name}
+              desc={bstSeller.desc}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </Box>
   );
 };
