@@ -28,7 +28,7 @@ export default function RootLayout({
             <ThemeProvider theme={theme}>
               <CssBaseline enableColorScheme />
               <Navbar />
-              <main>{children}</main>
+              <main style={{ minHeight: "80vh" }}>{children}</main>
               <footer>
                 <Footer />
               </footer>
