@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, SxProps } from "@mui/material";
+import { Box, Stack, SxProps, Typography } from "@mui/material";
 import { ReactNode, useEffect } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export interface CarouselProps {
   items: ItemPrpos[];
+  title?: string;
 }
 
 export interface ItemPrpos {
@@ -18,14 +19,14 @@ export interface ItemPrpos {
 }
 
 const swiperSlideItemWrapper: SxProps = {
-  height: "375px",
-  width: "375px",
+  height: "422px",
+  width: "422px",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
 };
 
-const Carousel: React.FC<CarouselProps> = ({ items }) => {
+const Carousel: React.FC<CarouselProps> = ({ items, title }) => {
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--swiper-theme-color",
@@ -33,28 +34,43 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
     );
   }, []);
   return (
-    <Swiper
-      modules={[Navigation, Autoplay]}
-      spaceBetween={20}
-      slidesPerView={1}
-      navigation
-      autoplay={{ delay: 2000 }}
-      breakpoints={{
-        640: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      }}
-      style={{ padding: "35px 0px" }}
-    >
-      {items.map((item, index) => (
-        <SwiperSlide
-          key={index}
-          style={{ display: "flex", justifyContent: "center" }}
+    <Box sx={{ textAlign: "center" }}>
+      {title && (
+        <Typography
+          variant="h3"
+          sx={{
+            fontFamily: "Vinter-Medium",
+            fontWeight: "lighter",
+            letterSpacing: "5px",
+            margin: "30px 0",
+          }}
         >
-          <Box sx={swiperSlideItemWrapper}>{item.item}</Box>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          {title}
+        </Typography>
+      )}
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={20}
+        slidesPerView={1}
+        navigation
+        autoplay={{ delay: 2000 }}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        style={{ padding: "35px 0px" }}
+      >
+        {items.map((item, index) => (
+          <SwiperSlide
+            key={index}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <Box sx={swiperSlideItemWrapper}>{item.item}</Box>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </Box>
   );
 };
 
