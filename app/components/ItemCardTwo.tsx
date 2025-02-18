@@ -3,8 +3,6 @@ import Image from "next/image";
 import React from "react";
 
 const carouselImageWrapperStyles2: SxProps = {
-  height: "300px",
-  width: "350px",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -16,17 +14,35 @@ interface ItemCardTwoProps {
   imageUrl: string;
   title: React.ReactNode;
   price: number;
+  imageHeight?: number;
+  imageWidth?: number;
+  shadow?: boolean;
 }
 
 const ItemCardTwo: React.FC<ItemCardTwoProps> = ({
   imageUrl,
   title,
   price,
+  imageHeight = 300,
+  imageWidth = 350,
+  shadow = false,
 }) => {
   return (
     <Stack sx={{ justifyContent: "center", alignItems: "center" }} spacing={1}>
-      <Box sx={carouselImageWrapperStyles2}>
-        <Image alt="lamb" src={imageUrl} height={250} width={250} />
+      <Box
+        sx={{
+          ...carouselImageWrapperStyles2,
+          filter: shadow ? "drop-shadow(2px 4px 13px black)" : "",
+        }}
+        height={imageHeight}
+        width={imageWidth}
+      >
+        <Image
+          alt="lamb"
+          src={imageUrl}
+          height={imageHeight}
+          width={imageWidth}
+        />
       </Box>
       <Typography
         sx={{
@@ -35,6 +51,7 @@ const ItemCardTwo: React.FC<ItemCardTwoProps> = ({
           letterSpacing: "2px",
           textAlign: "start",
         }}
+        width={220}
       >
         {title}
       </Typography>

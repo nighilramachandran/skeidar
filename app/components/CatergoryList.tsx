@@ -17,7 +17,7 @@ interface CategoryListValues {
   href: string | UrlObject;
 }
 
-const { ROOT, ALL_PRODUCTS, ALL_BEDS, CONTINENTAL_BEDS } = ROUTES;
+const { ROOT, ALL_PRODUCTS, ALL_SOFA, CONTINENTAL_BEDS } = ROUTES;
 
 const categoryList: CategoryListValues[] = [
   { name: "home", translationKey: "Hjem", href: ROOT },
@@ -26,7 +26,7 @@ const categoryList: CategoryListValues[] = [
     translationKey: "Alle produkter",
     href: ALL_PRODUCTS,
   },
-  { name: "all beds", translationKey: "Alle senger", href: ALL_BEDS },
+  { name: "all sofa", translationKey: "alle sofa", href: ALL_SOFA },
   {
     name: "continental beds",
     translationKey: "Kontinentalsenger",

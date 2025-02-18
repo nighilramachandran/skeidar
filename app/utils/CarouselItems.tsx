@@ -64,6 +64,7 @@ export const carouselItems2: ItemPrpos[] = Array.from(
             <br /> Glow Kontintentalseng
           </>
         }
+        shadow
       />
     ),
   })
