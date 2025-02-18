@@ -1,6 +1,6 @@
 "use client";
 
-import { Box } from "@mui/material";
+import { Box, SxProps } from "@mui/material";
 import { ReactNode } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,6 +16,15 @@ export interface ItemPrpos {
   name: string;
   item: ReactNode;
 }
+
+const swiperSlideItemWrapper: SxProps = {
+  height: "375px",
+  width: "375px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  background: "red",
+};
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
   return (
@@ -37,18 +46,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
           key={index}
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <Box
-            sx={{
-              height: "375px",
-              width: "375px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              background: "red",
-            }}
-          >
-            {item.item}
-          </Box>
+          <Box sx={swiperSlideItemWrapper}>{item.item}</Box>
         </SwiperSlide>
       ))}
     </Swiper>
