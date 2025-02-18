@@ -20,8 +20,6 @@ const footerItems = [
 
 const footerImageItems = [imagePostnordUrl, imageVisaUrl, imageVappsUrl];
 
-console.log("footerImageItems", footerImageItems[0]);
-
 const Footer: React.FC = () => {
   return (
     <Box

@@ -11,7 +11,6 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import React, { useState } from "react";
 import CatergoryList from "./components/CatergoryList";
 import AppDrawer from "./components/Drawer";
@@ -45,7 +44,7 @@ const Navbar: React.FC = () => {
 
         <AppDrawer open={openDrawer} onClose={toggleDrawer} />
         <Logo />
-        <ProfileAndCart isDesktop={isDesktop!!} />
+        <ProfileAndCart isDesktop={isDesktop ?? false} />
       </Toolbar>
       <CatergoryList />
     </AppBar>
