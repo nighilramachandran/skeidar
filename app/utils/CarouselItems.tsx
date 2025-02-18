@@ -1,4 +1,4 @@
-import { Box, SxProps } from "@mui/material";
+import { Box, Stack, SxProps, Typography } from "@mui/material";
 import { ItemPrpos } from "../components/Carousel";
 import Image from "next/image";
 
@@ -18,14 +18,33 @@ export const carouselItems1: ItemPrpos[] = Array.from(
   (_, index) => ({
     name: `Item ${index + 1}`,
     item: (
-      <Box sx={carouselImageWrapperStyles}>
-        <Image
-          alt="lamb"
-          src="/images/nightlamb.png"
-          height={200}
-          width={200}
-        />
-      </Box>
+      <Stack
+        sx={{ justifyContent: "center", alignItems: "center" }}
+        spacing={1}
+      >
+        <Box sx={carouselImageWrapperStyles}>
+          <Image
+            alt="lamb"
+            src="/images/nightlamb.png"
+            height={200}
+            width={200}
+          />
+        </Box>
+        <Typography sx={{ fontSize: "20px", fontWeight: 900 }}>
+          nå 79.999
+        </Typography>
+        <Typography sx={{ fontSize: "12px", color: "text.link" }}>
+          Leah{" "}
+          <Box
+            component="span"
+            sx={{
+              textDecoration: "line-through",
+            }}
+          >
+            99.999
+          </Box>
+        </Typography>
+      </Stack>
     ),
   })
 );

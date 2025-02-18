@@ -23,17 +23,16 @@ const swiperSlideItemWrapper: SxProps = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  background: "red",
 };
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
   return (
     <Swiper
-      modules={[Navigation]}
+      modules={[Navigation, Autoplay]}
       spaceBetween={20}
       slidesPerView={1}
       navigation
-      autoplay={{ delay: 3000 }}
+      autoplay={{ delay: 2000 }}
       breakpoints={{
         640: { slidesPerView: 1 },
         768: { slidesPerView: 2 },
