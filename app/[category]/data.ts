@@ -15,90 +15,66 @@ export const productsData: ProductCategory = {
   [ALL_PRODUCTS]: [
     {
       id: 1,
-      name: "Kontinentalsenger",
+      name: "putekasser",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/105438_150x200cm_lysgra_000_0012.jpg?id=OdpN8n&width=393&height=294&rmode=min&quality=75&format=jpg",
-      price: 899.34,
+        "https://www.skeidar.no/globalassets/113126_natur_100_001.jpg?id=%2F6wdEQ&width=393&height=294&rmode=crop&quality=75&format=jpg",
+      price: 1999.34,
     },
     {
       id: 2,
       name: "Sofa",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/105585_25oehbropoklyn9armfhvitoljetben1_000_001.jpg?id=kyrTHz&width=393&height=294&rmode=min&quality=75&format=jpg",
-      price: 1999.34,
-    },
-
-    {
-      id: 4,
-      name: "Sofa",
-      image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/112295_oev2sjhneve85sorteben_000_001.jpg?id=i2bke8&width=393&height=294&rmode=min&quality=75&format=jpg",
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/105585_hjornesofa23tekstilbrego3greymedsorteben9_100_001.jpg?id=lnmFv6&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 1999.34,
     },
     {
       id: 3,
-      name: "Kontinentalsenger",
+      name: "gulvtepper",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/108075_sleepiitekstil394antrasitt150x200cmmmmst_000_001.jpg?id=s8Gai%2F&width=393&height=294&rmode=min&quality=75&format=jpg",
-      price: 899.34,
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-tepper/gulvtepper/103414_160x230cm_hvit_100_001.jpg?id=e6uVAE&width=393&height=294&rmode=crop&quality=75&format=jpg",
+      price: 1999.34,
     },
     {
-      id: 10,
-      name: "Sofa",
+      id: 4,
+      name: "stoler",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/113840_oev3bhnivuslincremearm16duofir16naturskum_000_001.jpg?id=G7Q84y&width=393&height=294&rmode=min&quality=75&format=jpg",
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-stoler/krakker-til-lenestoler/109975_hudbaticklatteclassicsmokeoak_100_001.jpg?id=TqQzHt&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 1999.34,
     },
     {
       id: 5,
-      name: "Kontinentalsenger",
+      name: "kommoder",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/109112_160x200poppy25nmnmpremiumhyperflexrund13sort_000_001.jpg?id=Q0maV%20&width=393&height=294&rmode=min&quality=75&format=jpg",
-      price: 899.34,
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/all-oppbevaring-og-skap/kommoder/110658_4_sort_smal_100_001.jpg?id=Xz1W8T&width=393&height=294&rmode=crop&quality=75&format=jpg",
+      price: 1999.34,
     },
 
     {
-      id: 7,
+      id: 6,
       name: "Kontinentalsenger",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/113247_150x200storm09nmnmxov60sorteben_000_001.jpg?id=V2orLH&width=393&height=294&rmode=min&quality=75&format=jpg",
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/rammemadrasser/106389_120x200cm_gra_100_001.jpg?id=rdGp59&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 899.34,
     },
     {
-      id: 6,
+      id: 7,
       name: "Sofa",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/112754_2oehbjorn34sorteben_000_001.jpg?id=giGdxt&width=393&height=294&rmode=min&quality=75&format=jpg",
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/105588_14575144277armeglege8_100_001.jpg?id=WlKZQ0&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 1999.34,
     },
     {
       id: 8,
-      name: "Sofa",
+      name: "Kontinentalsenger",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/113952_portlandhjornesofavenstreherby35greymedsorteben_000_001.jpg?id=QOP8kx&width=393&height=294&rmode=min&quality=75&format=jpg",
-      price: 1999.34,
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/rammemadrasser/109716_75x200pine54nmpremiumhyperflexrund23sort_100_001.jpg?id=1%2FPj%2FO&width=393&height=294&rmode=crop&quality=75&format=jpg",
+      price: 899.34,
     },
-
     {
       id: 9,
-      name: "Kontinentalsenger",
-      image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/114140_tekstil272muldvarpmm150x200cmhvitvasketben_000_001.jpg?id=XgxpRT&width=393&height=294&rmode=min&quality=75&format=jpg",
-      price: 899.34,
-    },
-
-    {
-      id: 11,
-      name: "Kontinentalsenger",
-      image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/105438_150x200cm_lysgra_000_0012.jpg?id=OdpN8n&width=393&height=294&rmode=min&quality=75&format=jpg",
-      price: 899.34,
-    },
-    {
-      id: 12,
       name: "Sofa",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/112295_oev2sjhneve85sorteben_000_001.jpg?id=i2bke8&width=393&height=294&rmode=min&quality=75&format=jpg",
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/106105_4400041_100_001.jpg?id=Li6bqb&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 1999.34,
     },
   ],
@@ -107,70 +83,42 @@ export const productsData: ProductCategory = {
       id: 1,
       name: "Sofa",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/105585_25oehbropoklyn9armfhvitoljetben1_000_001.jpg?id=kyrTHz&width=393&height=294&rmode=min&quality=75&format=jpg",
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/105585_hjornesofa23tekstilbrego3greymedsorteben9_100_001.jpg?id=lnmFv6&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 1999.34,
     },
     {
       id: 2,
       name: "Sofa",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/112295_oev2sjhneve85sorteben_000_001.jpg?id=i2bke8&width=393&height=294&rmode=min&quality=75&format=jpg",
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/105588_14575144277armeglege8_100_001.jpg?id=WlKZQ0&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 1999.34,
     },
     {
       id: 3,
       name: "Sofa",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/112754_2oehbjorn34sorteben_000_001.jpg?id=giGdxt&width=393&height=294&rmode=min&quality=75&format=jpg",
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/106105_4400041_100_001.jpg?id=Li6bqb&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 1999.34,
     },
     {
       id: 4,
       name: "Sofa",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/113840_oev3bhnivuslincremearm16duofir16naturskum_000_001.jpg?id=G7Q84y&width=393&height=294&rmode=min&quality=75&format=jpg",
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/106437_oev2brego34beigesorteben_100_001.jpg?id=c%20OSyH&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 1999.34,
     },
     {
       id: 5,
       name: "Sofa",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/113952_portlandhjornesofavenstreherby35greymedsorteben_000_001.jpg?id=QOP8kx&width=393&height=294&rmode=min&quality=75&format=jpg",
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/107205_oppsett3_sort_venstre_100_001.jpg?id=4EgJQc&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 1999.34,
     },
     {
       id: 6,
       name: "Sofa",
       image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/105585_25oehbropoklyn9armfhvitoljetben1_000_001.jpg?id=kyrTHz&width=393&height=294&rmode=min&quality=75&format=jpg",
-      price: 1999.34,
-    },
-    {
-      id: 7,
-      name: "Sofa",
-      image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/112295_oev2sjhneve85sorteben_000_001.jpg?id=i2bke8&width=393&height=294&rmode=min&quality=75&format=jpg",
-      price: 1999.34,
-    },
-    {
-      id: 8,
-      name: "Sofa",
-      image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/112754_2oehbjorn34sorteben_000_001.jpg?id=giGdxt&width=393&height=294&rmode=min&quality=75&format=jpg",
-      price: 1999.34,
-    },
-    {
-      id: 9,
-      name: "Sofa",
-      image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/113840_oev3bhnivuslincremearm16duofir16naturskum_000_001.jpg?id=G7Q84y&width=393&height=294&rmode=min&quality=75&format=jpg",
-      price: 1999.34,
-    },
-    {
-      id: 10,
-      name: "Sofa",
-      image:
-        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/113952_portlandhjornesofavenstreherby35greymedsorteben_000_001.jpg?id=QOP8kx&width=393&height=294&rmode=min&quality=75&format=jpg",
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/108067_25oehbrego14hvitoljeteikben1armf_100_001.jpg?id=%2FjhJuX&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 1999.34,
     },
   ],
@@ -231,79 +179,5 @@ export const productsData: ProductCategory = {
         "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/rammemadrasser/113890_120x200cm_gra_100_001.jpg?id=GsQ5%2Ff&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 899.34,
     },
-    // {
-    //   id: 1,
-    //   name: "Kontinentalsenger",
-    //   image:
-    //     "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/105438_150x200cm_lysgra_000_0012.jpg?id=OdpN8n&width=393&height=294&rmode=min&quality=75&format=jpg",
-    //   price: 899.34,
-    // },
-    // {
-    //   id: 2,
-    //   name: "Kontinentalsenger",
-    //   image:
-    //     "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/108075_sleepiitekstil394antrasitt150x200cmmmmst_000_001.jpg?id=s8Gai%2F&width=393&height=294&rmode=min&quality=75&format=jpg",
-    //   price: 899.34,
-    // },
-    // {
-    //   id: 3,
-    //   name: "Kontinentalsenger",
-    //   image:
-    //     "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/109112_160x200poppy25nmnmpremiumhyperflexrund13sort_000_001.jpg?id=Q0maV%20&width=393&height=294&rmode=min&quality=75&format=jpg",
-    //   price: 899.34,
-    // },
-
-    // {
-    //   id: 4,
-    //   name: "Kontinentalsenger",
-    //   image:
-    //     "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/113247_150x200storm09nmnmxov60sorteben_000_001.jpg?id=V2orLH&width=393&height=294&rmode=min&quality=75&format=jpg",
-    //   price: 899.34,
-    // },
-
-    // {
-    //   id: 5,
-    //   name: "Kontinentalsenger",
-    //   image:
-    //     "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/114140_tekstil272muldvarpmm150x200cmhvitvasketben_000_001.jpg?id=XgxpRT&width=393&height=294&rmode=min&quality=75&format=jpg",
-    //   price: 899.34,
-    // },
-
-    // {
-    //   id: 6,
-    //   name: "Kontinentalsenger",
-    //   image:
-    //     "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/105438_150x200cm_lysgra_000_0012.jpg?id=OdpN8n&width=393&height=294&rmode=min&quality=75&format=jpg",
-    //   price: 899.34,
-    // },
-
-    // {
-    //   id: 7,
-    //   name: "Kontinentalsenger",
-    //   image:
-    //     "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/109112_160x200poppy25nmnmpremiumhyperflexrund13sort_000_001.jpg?id=Q0maV%20&width=393&height=294&rmode=min&quality=75&format=jpg",
-    //   price: 899.34,
-    // },
-    // {
-    //   id: 8,
-    //   name: "Kontinentalsenger",
-    //   image:
-    //     "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/113247_150x200storm09nmnmxov60sorteben_000_001.jpg?id=V2orLH&width=393&height=294&rmode=min&quality=75&format=jpg",
-    //   price: 899.34,
-    // },
-    // {
-    //   id: 9,
-    //   name: "Kontinentalsenger",
-    //   image:
-    //     "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/114140_tekstil272muldvarpmm150x200cmhvitvasketben_000_001.jpg?id=XgxpRT&width=393&height=294&rmode=min&quality=75&format=jpg",
-    //   price: 899.34,
-    // },
-    // {
-    //   id: 10,
-    //   name: "Kontinentalsenger",
-    //   image:
-    //     "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-senger-og-madrasser/kontinentalsenger/109112_160x200poppy25nmnmpremiumhyperflexrund13sort_000_001.jpg?id=Q0maV%20&width=393&height=294&rmode=min&quality=75&format=jpg",
-    //   price: 899.34,
-    // },
   ],
 };
