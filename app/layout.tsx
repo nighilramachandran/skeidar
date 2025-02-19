@@ -9,11 +9,15 @@ import theme from "./styles/theme/theme";
 import LanguageProviders from "./providers/LanguageProviders";
 import Footer from "./Footer";
 import "./global.css";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Skeidar | Home Appliances",
   description:
     "Discover a wide range of premium home appliances at Skeidar. Shop high-quality kitchen, living, and household essentials with great deals.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
