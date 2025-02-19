@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 
-const NotFound = () => {
+const NotFound: React.FC = () => {
   return (
     <Box
       display="flex"
