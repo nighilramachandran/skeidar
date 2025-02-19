@@ -4,12 +4,13 @@ import { notFound } from "next/navigation";
 import CustomeContainer from "../components/CustomeContainer";
 import Hero from "../components/Hero";
 import { productsData } from "./data";
+import CategoryCard from "../components/CategoryCard";
 
 interface Props {
   params: Promise<{ category: string }>;
 }
 
-const sellerItemsContainerStyles: SxProps = {
+const categoryContainerStyles: SxProps = {
   flexDirection: "row",
   flexWrap: "wrap",
   width: "100%",
@@ -25,31 +26,17 @@ const CategoryPage = async ({ params }: Props) => {
     <CustomeContainer>
       <Stack
         sx={{
-          ...sellerItemsContainerStyles,
+          ...categoryContainerStyles,
           justifyContent: { xs: "center", xl: "space-around" },
         }}
       >
         {products.length &&
           products?.map((prod, index) => {
             return (
-              <Box
+              <CategoryCard
                 key={`${index}-${prod.id}-${prod.name}`}
-                sx={{
-                  height: "334px",
-                  width: "448px",
-                  background: "red",
-                  position: "relative",
-                }}
-              >
-                <Image
-                  src={prod.image}
-                  alt="Example Image"
-                  priority
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="(max-width: 600px) 100vw, 33vw"
-                />
-              </Box>
+                imageUrl={prod.image}
+              />
             );
           })}
       </Stack>
