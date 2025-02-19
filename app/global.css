@@ -11,7 +11,3 @@
   src: url("./Fonts/VinterWeb-Medium.woff2") format("woff2");
   font-weight: normal;
 }
-
-* {
-  border: 1px solid red;
-}

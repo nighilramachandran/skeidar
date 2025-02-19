@@ -1,13 +1,20 @@
+import { Box, Stack, SxProps } from "@mui/material";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import React from "react";
-import { productsData } from "./data";
-import ItemCardTwo from "../components/ItemCardTwo";
-import { Grid2, Stack } from "@mui/material";
+import CustomeContainer from "../components/CustomeContainer";
 import Hero from "../components/Hero";
+import { productsData } from "./data";
 
 interface Props {
   params: Promise<{ category: string }>;
 }
+
+const sellerItemsContainerStyles: SxProps = {
+  flexDirection: "row",
+  flexWrap: "wrap",
+  width: "100%",
+  gap: "5px",
+};
 const CategoryPage = async ({ params }: Props) => {
   const { category } = await params;
   const products = productsData[category];
@@ -15,24 +22,39 @@ const CategoryPage = async ({ params }: Props) => {
   if (!products) notFound();
 
   return (
-    <Stack spacing={5} padding={"30px 0px"}>
-      <Grid2 container>
+    <CustomeContainer>
+      <Stack
+        sx={{
+          ...sellerItemsContainerStyles,
+          justifyContent: { xs: "center", xl: "space-around" },
+        }}
+      >
         {products.length &&
           products?.map((prod, index) => {
             return (
-              <Grid2 size={{ xs: 12, lg: 6 }} key={index}>
-                <ItemCardTwo
-                  key={`${index}-${prod.id}-${prod.name}`}
-                  title={prod.name}
-                  imageUrl={prod.image}
-                  price={prod.price}
+              <Box
+                key={`${index}-${prod.id}-${prod.name}`}
+                sx={{
+                  height: "334px",
+                  width: "448px",
+                  background: "red",
+                  position: "relative",
+                }}
+              >
+                <Image
+                  src={prod.image}
+                  alt="Example Image"
+                  priority
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 600px) 100vw, 33vw"
                 />
-              </Grid2>
+              </Box>
             );
           })}
-      </Grid2>
+      </Stack>
       <Hero />
-    </Stack>
+    </CustomeContainer>
   );
 };
 
