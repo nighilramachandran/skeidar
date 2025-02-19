@@ -15,7 +15,9 @@ const categoryContainerStyles: SxProps = {
   flexWrap: "wrap",
   width: "100%",
   gap: "5px",
+  justifyContent: { xs: "center", xl: "space-around" },
 };
+
 const CategoryPage = async ({ params }: Props) => {
   const { category } = await params;
   const products = productsData[category];
@@ -24,12 +26,7 @@ const CategoryPage = async ({ params }: Props) => {
 
   return (
     <CustomeContainer>
-      <Stack
-        sx={{
-          ...categoryContainerStyles,
-          justifyContent: { xs: "center", xl: "space-around" },
-        }}
-      >
+      <Stack sx={categoryContainerStyles}>
         {products.length &&
           products?.map((prod, index) => {
             return (

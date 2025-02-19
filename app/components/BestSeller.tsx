@@ -9,17 +9,13 @@ const sellerItemsContainerStyles: SxProps = {
   flexWrap: "wrap",
   width: "100%",
   gap: "40px",
+  justifyContent: { xs: "center", xl: "space-around" },
 };
 
 const BestSeller: React.FC = () => {
   return (
     <CustomeContainer>
-      <Stack
-        sx={{
-          ...sellerItemsContainerStyles,
-          justifyContent: { xs: "center", xl: "space-around" },
-        }}
-      >
+      <Stack sx={sellerItemsContainerStyles}>
         {bestSellerAssets.map((bstSeller, index) => {
           return (
             <ItemsCard
