@@ -26,6 +26,7 @@ const Footer: React.FC = () => {
         minHeight: "200px",
         width: "100%",
         bgcolor: "background.footer",
+        marginTop: "40px",
       }}
     >
       <CustomeContainer>
