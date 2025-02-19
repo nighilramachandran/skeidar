@@ -121,6 +121,20 @@ export const productsData: ProductCategory = {
         "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/108067_25oehbrego14hvitoljeteikben1armf_100_001.jpg?id=%2FjhJuX&width=393&height=294&rmode=crop&quality=75&format=jpg",
       price: 1999.34,
     },
+    {
+      id: 7,
+      name: "Sofa",
+      image:
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/105585_hjornesofa23tekstilbrego3greymedsorteben9_100_001.jpg?id=lnmFv6&width=393&height=294&rmode=crop&quality=75&format=jpg",
+      price: 1999.34,
+    },
+    {
+      id: 8,
+      name: "Sofa",
+      image:
+        "https://www.skeidar.no/globalassets/9999/alle-produkter/alle-sofaer/sofa/105588_14575144277armeglege8_100_001.jpg?id=WlKZQ0&width=393&height=294&rmode=crop&quality=75&format=jpg",
+      price: 1999.34,
+    },
   ],
   [CONTINENTAL_BEDS]: [
     {
