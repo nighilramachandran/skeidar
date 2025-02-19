@@ -27,8 +27,8 @@ const CategoryPage = async ({ params }: Props) => {
     <React.Fragment>
       <Stack spacing={10}>
         {products && <CategoryItems products={products} />}
-        <Hero />
         <MessageBlock />
+        <Hero />
       </Stack>
     </React.Fragment>
   );
