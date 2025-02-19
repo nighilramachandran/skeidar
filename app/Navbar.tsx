@@ -73,7 +73,7 @@ const CampaignMessage = () => {
   );
 };
 
-const ProfileAndCart: React.FC = () => {
+export const ProfileAndCart: React.FC = () => {
   return (
     <Stack
       sx={{

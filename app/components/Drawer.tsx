@@ -1,7 +1,8 @@
 import React from "react";
 import Drawer, { drawerClasses } from "@mui/material/Drawer";
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import CatergoryList from "./CatergoryList";
+import { ProfileAndCart } from "../Navbar";
 
 interface AppDrawerProps {
   open: boolean;
@@ -14,11 +15,21 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ open, onClose }) => {
       onClose={onClose}
       sx={{ [`.${drawerClasses.paper}`]: { borderRadius: 0 } }}
     >
-      <CatergoryList
-        direction="vertical"
-        device="mobile"
-        onCategorySelect={onClose}
-      />
+      <Stack
+        spacing={2}
+        sx={{
+          height: "100%",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <CatergoryList
+          direction="vertical"
+          device="mobile"
+          onCategorySelect={onClose}
+        />
+        <ProfileAndCart />
+      </Stack>
     </Drawer>
   );
 };
