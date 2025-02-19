@@ -49,17 +49,15 @@ const ItemCardTwo: React.FC<ItemCardTwoProps> = ({
           fontSize: "18px",
           fontWeight: 300,
           letterSpacing: "2px",
-          textAlign: "start",
+          textAlign: "center",
         }}
-        width={220}
       >
         {title}
       </Typography>
       <Stack
         flexDirection={"row"}
         alignItems={"center"}
-        textAlign={"start"}
-        width={220}
+        textAlign={"center"}
         gap={3}
       >
         <Typography sx={{ fontSize: "20px", fontWeight: 900 }}>
@@ -76,8 +74,7 @@ const ItemCardTwo: React.FC<ItemCardTwoProps> = ({
         </Typography>
       </Stack>
       <Typography
-        sx={{ fontSize: "12px", letterSpacing: "2px", textAlign: "start" }}
-        width={220}
+        sx={{ fontSize: "12px", letterSpacing: "2px", textAlign: "center" }}
       >
         flere størrelser
       </Typography>
