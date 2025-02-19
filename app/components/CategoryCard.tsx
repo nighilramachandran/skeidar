@@ -59,6 +59,7 @@ const ImageContainer: React.FC<ImageContainerProps> = ({ imageUrl }) => {
         fill
         style={{ objectFit: "cover" }}
         sizes="(max-width: 600px) 100vw, 33vw"
+        priority
       />
       <OfferTag />
     </Box>
