@@ -39,7 +39,9 @@ const Navbar: React.FC = () => {
           </IconButton>
         </Box>
         <AppDrawer open={openDrawer} onClose={toggleDrawer} />
-        <Logo />
+        <Box className="centerLogo">
+          <Logo />
+        </Box>
         <Box className="hideOnMobile">
           <ProfileAndCart />
         </Box>
