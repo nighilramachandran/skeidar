@@ -1,4 +1,4 @@
-import { Stack, SxProps } from "@mui/material";
+import { Box, Stack, SxProps, Typography } from "@mui/material";
 import { notFound } from "next/navigation";
 import CategoryCard from "../components/CategoryCard";
 import Hero from "../components/Hero";
@@ -28,6 +28,7 @@ const CategoryPage = async ({ params }: Props) => {
       <Stack spacing={10}>
         {products && <CategoryItems products={products} />}
         <Hero />
+        <MessageBlock />
       </Stack>
     </React.Fragment>
   );
@@ -52,6 +53,25 @@ const CategoryItems: React.FC<CategoryItemsProps> = ({ products }) => {
           );
         })}
     </Stack>
+  );
+};
+
+const messageBlockStyles: SxProps = {
+  height: "60px",
+  letterSpacing: "5px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  textAlign: "center",
+  color: "text.secondary",
+  bgcolor: "background.danger",
+};
+
+const MessageBlock: React.FC = () => {
+  return (
+    <Box sx={messageBlockStyles}>
+      <Typography>SISTE SJANSE PÅ KUPPENE OM 23:04:02</Typography>
+    </Box>
   );
 };
 
