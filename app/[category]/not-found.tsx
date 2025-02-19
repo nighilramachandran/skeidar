@@ -14,7 +14,7 @@ const NotFound = () => {
     >
       <ErrorOutlineIcon sx={{ fontSize: 60, color: "gray" }} />
       <Typography variant="h5" color="text.danger" mt={2}>
-        No items found
+        No such item found
       </Typography>
     </Box>
   );
