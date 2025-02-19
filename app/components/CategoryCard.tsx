@@ -8,6 +8,11 @@ const categoryCardContainerStyles: SxProps = {
   width: "448px",
   position: "relative",
   justifyContent: "space-between",
+  "@media (max-width: 600px)": {
+    height: "auto",
+    width: "100%",
+    padding: "10px",
+  },
 };
 
 interface CategoryCardProps {
@@ -24,12 +29,23 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   return (
     <Stack sx={categoryCardContainerStyles} spacing={2}>
       <ImageContainer imageUrl={imageUrl} />
-      <Stack height={96} justifyContent={"space-between"}>
+      <Stack
+        height={96}
+        justifyContent={"space-between"}
+        sx={{
+          "@media (max-width: 600px)": {
+            height: "auto",
+          },
+        }}
+      >
         <Typography
           sx={{
             fontSize: "18px",
             fontWeight: 300,
             letterSpacing: "2px",
+            "@media (max-width: 600px)": {
+              fontSize: "16px",
+            },
           }}
         >
           {title}
@@ -45,11 +61,16 @@ const imageContainerStyles: SxProps = {
   height: "334px",
   width: "448px",
   position: "relative",
+  "@media (max-width: 600px)": {
+    height: "250px",
+    width: "100%",
+  },
 };
 
 interface ImageContainerProps {
   imageUrl: string;
 }
+
 const ImageContainer: React.FC<ImageContainerProps> = ({ imageUrl }) => {
   return (
     <Box sx={imageContainerStyles}>
@@ -95,7 +116,14 @@ const ChooseColor: React.FC = () => {
   return (
     <Stack flexDirection={"row"} justifyContent={"space-between"}>
       <Typography
-        sx={{ fontSize: "12px", letterSpacing: "2px", textAlign: "start" }}
+        sx={{
+          fontSize: "12px",
+          letterSpacing: "2px",
+          textAlign: "start",
+          "@media (max-width: 600px)": {
+            fontSize: "10px",
+          },
+        }}
       >
         flere størrelser
       </Typography>
@@ -121,6 +149,7 @@ const ChooseColor: React.FC = () => {
 interface PricingProps {
   price: number;
 }
+
 const Pricing: React.FC<PricingProps> = ({ price }) => {
   return (
     <Stack
@@ -136,6 +165,9 @@ const Pricing: React.FC<PricingProps> = ({ price }) => {
           fontSize: "20px",
           color: "text.link",
           textDecoration: "line-through",
+          "@media (max-width: 600px)": {
+            fontSize: "16px",
+          },
         }}
       >
         {price}
