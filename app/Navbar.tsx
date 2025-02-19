@@ -15,7 +15,7 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import CatergoryList from "./components/CatergoryList";
 import AppDrawer from "./components/Drawer";
-import Logo from "./components/Logo";
+import Logo, { LogoSmall } from "./components/Logo";
 import {
   appBarStyles,
   CampaingStyles,
@@ -40,13 +40,20 @@ const Navbar: React.FC = () => {
         </Box>
         <AppDrawer open={openDrawer} onClose={toggleDrawer} />
         <Box className="centerLogo">
-          <Logo />
+          <Box className="showOnMobile">
+            <LogoSmall />
+          </Box>
+          <Box className="hideOnMobile">
+            <Logo />
+          </Box>
         </Box>
         <Box className="hideOnMobile">
           <ProfileAndCart />
         </Box>
       </Toolbar>
-      <CatergoryList />
+      <Box className="hideOnMobile">
+        <CatergoryList />
+      </Box>
     </AppBar>
   );
 };

@@ -15,5 +15,12 @@ const Logo: React.FC = () => {
     </Typography>
   );
 };
+export const LogoSmall: React.FC = () => {
+  return (
+    <Typography variant="h1" sx={{ ...LogoStyles }}>
+      SKR
+    </Typography>
+  );
+};
 
 export default Logo;

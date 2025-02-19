@@ -9,6 +9,8 @@ import { ROUTES } from "../utils/RouteConfig";
 
 interface CategoryListProps {
   direction?: "horizontal" | "vertical";
+  device?: "mobile" | "desktop";
+  onCategorySelect?: () => void;
 }
 
 interface CategoryListValues {
@@ -45,33 +47,39 @@ const categoryListStyles: SxProps = {
 
 const CatergoryList: React.FC<CategoryListProps> = ({
   direction = "horizontal",
+  device = "desktop",
+  onCategorySelect,
 }) => {
   const pathname = usePathname();
 
   return (
     <Box
+      id="Category"
       sx={{
         ...categoryListStyles,
         flexDirection: direction === "horizontal" ? "row" : "column",
-        bgcolor: "background.default",
+        bgcolor:
+          device === "desktop" ? "background.default" : "background.paper",
       }}
     >
       {categoryList.map((cat, index) => {
         return (
           <React.Fragment key={cat.name}>
-            <CustomLink
-              href={`/${cat.href}`}
-              sx={{
-                color:
-                  pathname === cat.href
-                    ? "text.primary"
-                    : pathname === `/${cat.href}`
-                    ? "text.primary"
-                    : "",
-              }}
-            >
-              {cat.translationKey}
-            </CustomLink>
+            <Box onClick={onCategorySelect}>
+              <CustomLink
+                href={`/${cat.href}`}
+                sx={{
+                  color:
+                    pathname === cat.href
+                      ? "text.primary"
+                      : pathname === `/${cat.href}`
+                      ? "text.primary"
+                      : "",
+                }}
+              >
+                {cat.translationKey}
+              </CustomLink>
+            </Box>
             {direction === "horizontal" &&
               categoryList.length - 1 !== index && (
                 <span style={{ color: "#b3b3b3" }}>|</span>
