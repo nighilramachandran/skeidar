@@ -14,7 +14,7 @@ const categoryContainerStyles: SxProps = {
   flexDirection: "row",
   flexWrap: "wrap",
   width: "100%",
-  gap: "5px",
+  gap: "12px",
   justifyContent: { xs: "center", xl: "space-around" },
 };
 
@@ -33,6 +33,8 @@ const CategoryPage = async ({ params }: Props) => {
               <CategoryCard
                 key={`${index}-${prod.id}-${prod.name}`}
                 imageUrl={prod.image}
+                title={prod.name}
+                price={prod.price}
               />
             );
           })}
