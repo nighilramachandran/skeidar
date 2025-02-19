@@ -21,6 +21,8 @@ const CategoryPage = async ({ params }: Props) => {
   const { category } = await params;
   const products = productsData[category];
 
+  console.log("products", products);
+
   if (!products) notFound();
 
   return (

@@ -56,7 +56,6 @@ const ImageContainer: React.FC<ImageContainerProps> = ({ imageUrl }) => {
       <Image
         src={imageUrl}
         alt="Example Image"
-        priority
         fill
         style={{ objectFit: "cover" }}
         sizes="(max-width: 600px) 100vw, 33vw"
