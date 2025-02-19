@@ -11,22 +11,19 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import CatergoryList from "./components/CatergoryList";
 import AppDrawer from "./components/Drawer";
 import Logo from "./components/Logo";
-import useResponsive from "./hooks/useResponsive";
 import {
   appBarStyles,
   CampaingStyles,
   headerStyles,
 } from "./utils/LayoutConfig";
-import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
-
-  const isDesktop = useResponsive("up", "md");
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -36,16 +33,16 @@ const Navbar: React.FC = () => {
     <AppBar sx={{ ...appBarStyles }}>
       <CampaignMessage />
       <Toolbar disableGutters sx={{ ...headerStyles }}>
-        <IconButton
-          onClick={toggleDrawer}
-          sx={{ opacity: !isDesktop ? 1 : 0, transition: "opacity 0.3s" }}
-        >
-          <MenuIcon sx={{ color: "text.primary", fontSize: "37px" }} />
-        </IconButton>
-
+        <Box className="showOnMobile">
+          <IconButton onClick={toggleDrawer}>
+            <MenuIcon sx={{ color: "text.primary", fontSize: "37px" }} />
+          </IconButton>
+        </Box>
         <AppDrawer open={openDrawer} onClose={toggleDrawer} />
         <Logo />
-        <ProfileAndCart isDesktop={isDesktop ?? false} />
+        <Box className="hideOnMobile">
+          <ProfileAndCart />
+        </Box>
       </Toolbar>
       <CatergoryList />
     </AppBar>
@@ -66,18 +63,12 @@ const CampaignMessage = () => {
   );
 };
 
-interface ProfileAndCartProps {
-  isDesktop: boolean;
-}
-
-const ProfileAndCart: React.FC<ProfileAndCartProps> = ({ isDesktop }) => {
+const ProfileAndCart: React.FC = () => {
   return (
     <Stack
       sx={{
         flexDirection: "row",
         gap: "15px",
-        opacity: isDesktop ? 1 : 0,
-        transition: "opacity 0.3s",
       }}
     >
       <PermIdentityOutlinedIcon sx={{ fontSize: "37px" }} />

@@ -8,6 +8,7 @@ import Navbar from "./Navbar";
 import theme from "./styles/theme/theme";
 import LanguageProviders from "./providers/LanguageProviders";
 import Footer from "./Footer";
+import "./global.css";
 
 export const metadata: Metadata = {
   title: "Skeidar | Home Appliances",

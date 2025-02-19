@@ -1,13 +1,31 @@
 @font-face {
   font-family: "MarkPro";
   font-display: swap;
-  src: url("./Fonts/MarkPro.woff2") format("woff2"),
-    url("./Fonts/MarkPro.woff") format("woff");
+  src: url("/fonts/MarkPro.woff2") format("woff2"),
+    url("/fonts/MarkPro.woff") format("woff");
   font-weight: normal;
 }
 @font-face {
   font-family: "Vinter-Medium'";
   font-display: swap;
-  src: url("./Fonts/VinterWeb-Medium.woff2") format("woff2");
+  src: url("/fonts/VinterWeb-Medium.woff2") format("woff2");
   font-weight: normal;
+}
+
+.showOnMobile {
+  display: none;
+}
+
+.hideOnMobile {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .showOnMobile {
+    display: block;
+  }
+
+  .hideOnMobile {
+    display: none;
+  }
 }
