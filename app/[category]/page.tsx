@@ -1,10 +1,9 @@
-import { Box, Stack, SxProps } from "@mui/material";
-import Image from "next/image";
+import { Stack, SxProps } from "@mui/material";
 import { notFound } from "next/navigation";
-import CustomeContainer from "../components/CustomeContainer";
-import Hero from "../components/Hero";
-import { productsData } from "./data";
 import CategoryCard from "../components/CategoryCard";
+import Hero from "../components/Hero";
+import { Product, productsData } from "./data";
+import React from "react";
 
 interface Props {
   params: Promise<{ category: string }>;
@@ -25,22 +24,34 @@ const CategoryPage = async ({ params }: Props) => {
   if (!products) notFound();
 
   return (
-    <CustomeContainer>
-      <Stack sx={categoryContainerStyles}>
-        {products.length &&
-          products?.map((prod, index) => {
-            return (
-              <CategoryCard
-                key={`${index}-${prod.id}-${prod.name}`}
-                imageUrl={prod.image}
-                title={prod.name}
-                price={prod.price}
-              />
-            );
-          })}
+    <React.Fragment>
+      <Stack spacing={10}>
+        {products && <CategoryItems products={products} />}
+        <Hero />
       </Stack>
-      <Hero />
-    </CustomeContainer>
+    </React.Fragment>
+  );
+};
+
+interface CategoryItemsProps {
+  products: Product[];
+}
+
+const CategoryItems: React.FC<CategoryItemsProps> = ({ products }) => {
+  return (
+    <Stack sx={categoryContainerStyles}>
+      {products.length &&
+        products?.map((prod, index) => {
+          return (
+            <CategoryCard
+              key={`${index}-${prod.id}-${prod.name}`}
+              imageUrl={prod.image}
+              title={prod.name}
+              price={prod.price}
+            />
+          );
+        })}
+    </Stack>
   );
 };
 
