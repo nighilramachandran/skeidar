@@ -58,6 +58,7 @@ const CampaignMessage = () => {
       sx={{
         ...CampaingStyles,
         bgcolor: pathname === "/" ? "background.danger" : "background.warning",
+        transition: "background-color 0.5s ease-in-out",
       }}
     >
       <Typography>CAMPAIGN MESSAGE LINE WITH MOVEMENT</Typography>
