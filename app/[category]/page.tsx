@@ -78,3 +78,11 @@ const MessageBlock: React.FC = () => {
 };
 
 export default CategoryPage;
+
+export function generateStaticParams() {
+  const categories = Object.keys(productsData);
+
+  return categories.map((category) => ({
+    category,
+  }));
+}
