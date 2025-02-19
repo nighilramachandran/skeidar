@@ -1,9 +1,9 @@
 import { Box, Stack, SxProps, Typography } from "@mui/material";
-import { notFound } from "next/navigation";
+import React from "react";
 import CategoryCard from "../components/CategoryCard";
 import Hero from "../components/Hero";
 import { Product, productsData } from "./data";
-import React from "react";
+import Notfound from "./not-found";
 
 interface Props {
   params: Promise<{ category: string }>;
@@ -21,14 +21,14 @@ const CategoryPage = async ({ params }: Props) => {
   const { category } = await params;
   const products = productsData[category];
 
-  console.log("products", products);
-
-  if (!products) notFound();
+  if (!products) {
+    return <Notfound />;
+  }
 
   return (
     <React.Fragment>
       <Stack spacing={10}>
-        {products && <CategoryItems products={products} />}
+        <CategoryItems products={products} />
         <MessageBlock />
         <Hero />
       </Stack>
