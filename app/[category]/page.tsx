@@ -79,6 +79,28 @@ const MessageBlock: React.FC = () => {
 
 export default CategoryPage;
 
+// Dynamics
+
+export async function generateMetadata({ params }: Props) {
+  const { category } = await params;
+  const categoryData = productsData[category];
+
+  if (!categoryData) {
+    return {
+      title: "Category Not Found",
+      description: "Sorry, we couldn't find any products for this category.",
+    };
+  }
+
+  const categoryName = category.charAt(0).toUpperCase() + category.slice(1);
+  const description = `Explore our ${categoryName} collection with exclusive deals and offers.`;
+
+  return {
+    title: `${categoryName} - Shop Now`,
+    description: description,
+  };
+}
+
 export function generateStaticParams() {
   const categories = Object.keys(productsData);
 
