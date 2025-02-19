@@ -4,12 +4,11 @@ import {
   ThemeProvider,
 } from "@mui/material";
 import type { Metadata } from "next";
-import Navbar from "./Navbar";
-import theme from "./styles/theme/theme";
-import LanguageProviders from "./providers/LanguageProviders";
 import Footer from "./Footer";
 import "./global.css";
-import Head from "next/head";
+import Navbar from "./Navbar";
+import LanguageProviders from "./providers/LanguageProviders";
+import theme from "./styles/theme/theme";
 
 export const metadata: Metadata = {
   title: "Skeidar | Home Appliances",
