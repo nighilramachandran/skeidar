@@ -1,8 +1,8 @@
 import { Stack } from "@mui/material";
 import Drawer, { drawerClasses } from "@mui/material/Drawer";
 import React from "react";
-import { ProfileAndCart } from "../Navbar";
 import CatergoryList from "./CatergoryList";
+import { ProfileAndCart } from "./ProfileAndCart";
 
 interface AppDrawerProps {
   open: boolean;

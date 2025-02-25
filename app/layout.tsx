@@ -9,6 +9,7 @@ import "./global.css";
 import Navbar from "./Navbar";
 import LanguageProviders from "./providers/LanguageProviders";
 import theme from "./styles/theme/theme";
+import MotionLazyContainer from "./components/animate/MotionLazyContainer";
 
 export const metadata: Metadata = {
   title: "Skeidar | Home Appliances",
@@ -28,16 +29,18 @@ export default function RootLayout({
     <html lang={"no"}>
       <body>
         <StyledEngineProvider injectFirst>
-          <LanguageProviders>
-            <ThemeProvider theme={theme}>
-              <CssBaseline enableColorScheme />
-              <Navbar />
-              <main style={{ minHeight: "80vh" }}>{children}</main>
-              <footer>
-                <Footer />
-              </footer>
-            </ThemeProvider>
-          </LanguageProviders>
+          <MotionLazyContainer>
+            <LanguageProviders>
+              <ThemeProvider theme={theme}>
+                <CssBaseline enableColorScheme />
+                <Navbar />
+                <main style={{ minHeight: "80vh" }}>{children}</main>
+                <footer>
+                  <Footer />
+                </footer>
+              </ThemeProvider>
+            </LanguageProviders>
+          </MotionLazyContainer>
         </StyledEngineProvider>
       </body>
     </html>
