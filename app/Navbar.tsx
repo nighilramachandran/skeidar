@@ -68,9 +68,7 @@ const CampaignMessage = () => {
         transition: "background-color 0.5s ease-in-out",
       }}
     >
-      <Typography>
-        CAMPAIGN MESSAGE LINE WITH MOVEMENT testing Ranjan
-      </Typography>
+      <Typography>CAMPAIGN MESSAGE LINE WITH MOVEMENT</Typography>
     </Box>
   );
 };
